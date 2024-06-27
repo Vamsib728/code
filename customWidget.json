@@ -1,0 +1,53 @@
+{
+  "eula": "",
+  "vendor": "Danish",
+  "license": "",
+  "id": "com.vamsi.sap.sac.chatgpt",
+  "version": "2.0.0",
+  "name": "ChatGPT SAC",
+  "newInstancePrefix": "chatGPTInSAC",
+  "description": "A custom widget to integrate ChatGPT in SAC Analytic applications",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "custom-widget",
+      "url": "https://vamsib728.github.io/code/main.js",
+      "integrity": "B2F4DA66C39D43481A54E84CAE06BB7EA776B8C28D89894D6AB378922DE6D4C6",
+      "ignoreIntegrity": false
+    }
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "default": 1
+    },
+    "height": {
+      "type": "integer",
+      "default": 1
+    }
+  },
+  "methods": {
+    "post": {
+      "description": "Wrapper for jQuery post to interact with ChatGPT API",
+      "parameters": [
+        {
+          "name": "APIKey",
+          "type": "string",
+          "description": "API Key for accessing ChatGPT API"
+        },
+        {
+          "name": "endPoint",
+          "type": "string",
+          "description": "API endpoint URL"
+        },
+        {
+          "name": "prompt",
+          "type": "string",
+          "description": "Prompt to send to ChatGPT"
+        }
+      ],
+      "returnType": "string"
+    }
+  },
+  "events": {}
+}
